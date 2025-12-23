@@ -1,0 +1,251 @@
+/*
+|-------------------------------------|
+| FINAL PROFESSIONAL PORTFOLIO STYLE  |
+|-------------------------------------|
+*/
+
+/* Accent color and variables */
+:root {
+  /* Yellow accent for 'bubbly' touch, used sparingly */
+  --accent: #FFD740; 
+  --card-bg: #ffffff; 
+  --border: #e0e0e0; 
+  --text-dark: #1a1a1a; /* Darker text for better contrast */
+  --text-body: #444444; /* Darker gray for legibility */
+  --bg-primary: #f7f7f7; /* Very light gray background */
+}
+
+/* Base setup */
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: var(--bg-primary); /* Use a subtle, professional light gray */
+  color: var(--text-body);
+  margin: 0;
+  line-height: 1.6; /* Reduced line height for better body text density */
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 700; 
+  color: var(--text-dark);
+  margin-top: 0;
+  margin-bottom: 0.5rem; 
+}
+
+/* Code Blocks (Essential for Data Science) */
+code, pre {
+    font-family: 'Source Code Pro', monospace;
+    background-color: #eeeeee;
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
+}
+pre {
+    padding: 1rem;
+    overflow-x: auto;
+    border: 1px solid #ddd;
+    margin: 1.5rem 0;
+}
+
+/* --- NAVIGATION --- */
+nav {
+  display: flex;
+  justify-content: flex-end; 
+  background: var(--card-bg); 
+  padding: 1rem 3rem; 
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03); 
+}
+
+
+/* Navigation Buttons (now styled like primary buttons) */
+.nav-button, .button-primary { 
+  color: var(--text-dark);
+  background: var(--accent); 
+  border: 1px solid var(--accent); 
+  border-radius: 6px; 
+  padding: 0.75rem 1.5rem; 
+  text-decoration: none;
+  font-weight: 700; 
+  text-transform: uppercase; 
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+  margin-left: 0.75rem; 
+  font-size: 0.9rem;
+}
+
+/* Hover effect for both */
+.nav-button:hover, .button-primary:hover {
+  background: #FFEB80; 
+  border-color: #FFEB80;
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
+}
+
+
+/* --- SECTIONS/CARDS --- */
+section {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent); /* Professional yellow accent stripe */
+  border-radius: 8px; 
+  padding: 2rem 2.5rem; 
+  margin: 2.5rem auto; /* Increased vertical spacing */
+  max-width: 900px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Slightly stronger default shadow */
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease; 
+}
+
+/* Hover Animation (Professional Lift) */
+section:hover {
+  transform: translateY(-3px); 
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1); 
+  border-left-color: var(--text-dark); /* Accent changes color on hover */
+}
+
+.projects {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr)); 
+    gap: 2rem; 
+    padding: 2rem; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+/* Individual Project Card */
+ .project-card { 
+    position: relative;
+     background-size: cover;
+      background-position: center; 
+      height: 325px; 
+      border-radius: 8px; 
+      overflow: hidden; 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+      transition: transform 0.3s ease, box-shadow 0.3s ease; 
+      display: block;
+      text-decoration: none;
+    }
+
+/* Hover effect */ 
+.project-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); 
+}
+/* Overlay Text */
+ .project-card .overlay { 
+    position: absolute; 
+    bottom: 0; 
+    width: 100%; 
+    background: rgba(255, 255, 255, 0.85); 
+    padding: 1rem; 
+    text-align: center; 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700; color: var(--text-dark);
+     text-transform: uppercase; 
+     letter-spacing: 0.05em;
+     }
+
+     /* NEW SUBTITLE STYLE */
+.project-card .overlay sub {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    color: var(--text-body);
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: 0.95rem;
+    margin-top: 0.5rem; /* Increased top margin for separation */
+    line-height: 1; /* Improved readability for long text */
+}
+
+/* Optional: Add background images via inline style or classes */
+ .project-card.mag { 
+    background-image: url('magna.jpg');
+ } 
+ 
+ .project-card.lorem { 
+    background-image: url('lorem.jpg');
+ } 
+ 
+ .project-card.feugiat { 
+    background-image: url('feugiat.jpg'); 
+}
+
+
+/* --- PROFILE PHOTO & PRIMARY BUTTON --- */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 4px solid var(--accent); 
+    box-shadow: 0 0 0 8px rgba(255, 215, 64, 0.2); 
+    margin-bottom: 1.5rem;
+}
+
+.button-primary { 
+  color: var(--text-dark);
+  background: var(--accent); 
+  border: 1px solid var(--accent); 
+  border-radius: 6px; 
+  padding: 0.75rem 1.5rem; 
+  text-decoration: none;
+  font-weight: 700; 
+  text-transform: uppercase; 
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+  margin-top: 1rem;
+}
+
+.button-primary:hover {
+  background: #FFEB80; 
+  border-color: #FFEB80;
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
+}
+
+.about-content {
+    display: flex;
+    align-items: center; /* Vertically center the image and text */
+    gap: 30px; /* Space between the image and the text */
+    margin-bottom: 1.5rem;
+}
+
+.about-content .about-text {
+    /* Allow the text to take up the remaining space */
+    flex-grow: 1; 
+}
+
+.profile-photo {
+    /* Increased size for more visibility, now set to 180px */
+    width: 250px; 
+    height: 250px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 4px solid var(--accent); 
+    box-shadow: 0 0 0 8px rgba(255, 215, 64, 0.2); 
+}
+
+/* --- LISTS --- */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+ul li {
+    padding-left: 0;
+    text-indent: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  background: var(--card-bg); 
+  border-top: 1px solid var(--border);
+}

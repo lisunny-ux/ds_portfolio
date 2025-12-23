@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sunny's Data Science Portfolio</title>
+  <meta name="description" content="Welcome to Sunny's Website" />
+
+  <!-- Import external stylesheet -->
+  <link rel="stylesheet" href="style_block.css">
+
+  <!-- Import Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@400;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div>
+        <a href="#about" class="nav-button">About</a>
+        <a href="#projects" class="nav-button">Projects</a>
+        <a href="#contact" class="nav-button">Contact</a>
+      </div>
+    </nav>
+
+  </header>
+
+  <section class="hero">
+    <h1>Hello, I'm Sunny!</h1>
+    <h3>And welcome to my data science portfolio.  </h3>
+    <a class="button-primary" href="#projects">View Projects</a>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      My name is Sunny, a first year student at the University of Chicago pursuing a BS in
+      Data Science and Computational and Applied Mathematics. </p>
+
+      
+<div class="about-content">
+      <img class="profile-photo" src="photos/profile.png" alt="Profile">
+      <span class="about-text">
+        I am drawn to data science because of its ability to solve problems across industries in creative ways,
+        and I look forward to building a career in the field.
+        In my spare time, I am constantly working on new projects and learning skills that I am excited to share here! 
+        Beyond the technical side, I enjoy the challenge of connecting data to meaningful stories and practical solutions.
+        <br><br>
+        While I am based in Chicago, I am originally from Edmonton, Canada. 
+        In my free time, I love to rock climb, dance, cook, or simply hangout with friends.
+      </span>
+    </div>
+    <ul>
+        <p><strong>Step into my world of data science through a collection of projects that reflect both my
+        technical qualifications and personal interests</strong>.</p>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <a class="project-card" href="projects/p1_main.html" style="background-image: url('photos/p1_project_image.jpg');">
+        <div class="overlay" class="project-title">Project One <br>
+            <sub>Chicago Weather Data Scraping & Power BI Dashboard</sub>
+        </div>
+        </a>
+        <a class="project-card" href="projects/p2_main.html" style="background-image: url('project2.jpg');">
+        <div class="overlay" class="project-title">Project Two <br>
+            <sub>This is my short description of project two. I will include the basic understanding of the project.</sub>
+        </div>
+        </a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Please feel free to get in touch!</p>
+    <p>📧 lisunny@uchicago.edu</p>
+    <p>📞 (312)-437-0570</p>
+  </section>
+
+  <footer>
+    <small>© <span id="year"></span> Sunny. All rights reserved.</small>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

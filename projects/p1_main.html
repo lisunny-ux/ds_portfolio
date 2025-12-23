@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project One Details</title>
+    <link rel="stylesheet" href="../style_block.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <a href="../main.html" class="button-primary">← Return to Home</a>
+        <br><br>
+        <h2>Project One: Chicago Weather Data Scraping & Power BI Dashboard</h2>
+        
+        <p>This project showcases the use of Selenium and Beautiful Soup to automate the scraping of real-time weather data 
+            for the Chicago area. After scraping, the data is cleaned and uploaded into Power BI, where it is transformed into an
+            intuitive, visually streamlined, and interactive dashboard, highlighting key weather trends and insights. </p>
+        <p> I am currently working on implementing automatic data refreshes to ensure the dashboard remains up to date without manual refreshes. 
+        </p>
+        <iframe title="p1_dashboard" width="600" height="373.5" 
+        src="https://app.powerbi.com/view?r=eyJrIjoiN2M4OGU0MWQtNGVmNi00ZjUxLWI4MGYtMTI3YmU0OWYxOWEzIiwidCI6IjgzYjAyYzkyLTVmMjYtNDhlZC05ZTViLTZjMmZjYTQ2YThlNiIsImMiOjN9" 
+        frameborder="0" allowFullScreen="true">
+        </iframe>
+        </section>
+
+    <footer>
+        <small>© <span id="year"></span> Sunny. All rights reserved.</small>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
