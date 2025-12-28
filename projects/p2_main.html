@@ -13,9 +13,18 @@
         <br><br>
         <h2>Project Two: Music Genre Clustering</h2>
         
-        <p>Explain the Project
-             </p>
-        <p> Statement About the Project
+        <p>This project explores clustering music into distinct genres using a variety of audio characteristics. The data cleaning process included normalizing 
+            relevant variables and removing those with low variance or strong multicollinearity. Each variable’s impact on clustering performance was evaluated
+             using KMeans, and variables with correlations below 0.6 were removed.
+            </p>
+            <p>
+                To determine the optimal number of clusters, silhouette scores were calculated across multiple cluster counts, with seven emerging as the ideal choice. 
+                The resulting clusters were then reduced to two dimensions and visualized using UMAP. Using the provided genre labels, genre purity scores were 
+                calculated to assess clustering accuracy. Of the genres analyzed, 48 showed weak correlation, 35 moderate, 19 good, 7 excellent, and 5 very weak 
+                alignment with the generated clusters.
+            </p>
+        <p>  In the future, I plan on applying different clustering methods, such as Gaussian Mixture Models, Spherical Clustering, or Hierarchical Clustering in hopes
+            of improving clustering accuracy.
         </p>
         <iframe
             src = "project-two/p2_clustering.html" width = "100%" height = "800" style = "border: none;"></iframe>
